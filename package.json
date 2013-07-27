@@ -1,12 +1,12 @@
 {
-  "name": "generator-ria",
-  "version": "0.0.0",
+  "name": "generator-webapp-fintan",
+  "version": "0.0.1",
   "description": "A generator for Yeoman",
   "keywords": [
     "yeoman-generator"
   ],
-  "homepage": "https://github.com/Fintan/generator-ria",
-  "bugs": "https://github.com/Fintan/generator-ria/issues",
+  "homepage": "https://github.com/Fintan/generator-webapp-fintan",
+  "bugs": "https://github.com/Fintan/generator-webapp-fintan/issues",
   "author": {
     "name": "Fintan",
     "email": "fintanboyle@gmail.com",
@@ -15,7 +15,7 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/fintan/generator-ria.git"
+    "url": "git://github.com/fintan/generator-webapp-fintan.git"
   },
   "scripts": {
     "test": "mocha"
