@@ -1,7 +1,5 @@
-require(function (require) {
+require(['jquery', 'app'], function ($, app) {
     'use strict';
-    var $ = require('jquery');
-    var app = require('app');
     console.log(app, 'Fintan!');
     console.log('Running jQuery %s', $().jquery);
 });
