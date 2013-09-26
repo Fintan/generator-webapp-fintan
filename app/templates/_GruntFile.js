@@ -17,7 +17,6 @@ module.exports = function (grunt) {
                 jshintrc: '.jshintrc'
             }
         },
-
         requirejs: {
             dist: {
                 options: {
@@ -30,6 +29,14 @@ module.exports = function (grunt) {
                     useStrict: true,
                     wrap: true
                 }
+            }
+        },
+        bower: {
+            target: {
+                options: {
+                    exclude: ['requirejs']
+                },
+                rjsConfig: yeomanConfig.app + '/scripts/app.build.js'
             }
         },
         clean: ["dist/*"],
@@ -79,8 +86,9 @@ module.exports = function (grunt) {
 
     });
 
-    grunt.registerTask('deploy', [ 'clean', 'copy:dist', 'copy:bower_libs', 'requirejs' ]);
-    grunt.registerTask('build', [ 'clean', 'copy:dist', 'copy:bower_libs', 'copy:amd_not_compiled', 'concat:amd_not_compiled']);
+    //remember to run 'grunt bower' every time a new packge is installed 
+    grunt.registerTask('deploy', [ 'jshint', 'clean', 'copy:dist', /*'copy:bower_libs',*/ 'bower', 'requirejs' ]);
+    grunt.registerTask('build', [ 'jshint', 'clean', 'copy:dist', /*'copy:bower_libs',*/ 'copy:amd_not_compiled', 'bower', 'concat:amd_not_compiled']);
 
 };
 
